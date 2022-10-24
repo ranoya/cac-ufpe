@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 
 <!-- 
-  Revisão 2:
+  Revisão 2.1:
 
   Dificuldades com o publish do Observable
   Versões cacheadas não são atualizadas para
   a última publicação;
   Despublicar quebra o javascript de exportação
   e o processo precisa ser feito do zero
+
+  Inclusão do termo Semanais no extrato de horas
 
 -->
 
@@ -46,29 +48,29 @@
   <body></body>
 </html>
 
-<div id="observablehq-viewof-filtro-2d3b4664"></div>
+<div id="observablehq-viewof-filtro-f20b0d25"></div>
 <br /><br />
-<div id="observablehq-tabelea-2d3b4664"></div>
-<div id="observablehq-estilo-2d3b4664"></div>
+<div id="observablehq-tabelea-f20b0d25"></div>
+<div id="observablehq-estilo-f20b0d25"></div>
 
 <script type="module">
   import {
     Runtime,
     Inspector,
   } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-  import define from "https://api.observablehq.com/d/5038f6136ae20fc5.js?v=3";
+  import define from "https://api.observablehq.com/d/5038f6136ae20fc5@212.js?v=3";
   new Runtime().module(define, (name) => {
-    if (name === "tabelea")
-      return new Inspector(
-        document.querySelector("#observablehq-tabelea-2d3b4664")
-      );
     if (name === "viewof filtro")
       return new Inspector(
-        document.querySelector("#observablehq-viewof-filtro-2d3b4664")
+        document.querySelector("#observablehq-viewof-filtro-f20b0d25")
+      );
+    if (name === "tabelea")
+      return new Inspector(
+        document.querySelector("#observablehq-tabelea-f20b0d25")
       );
     if (name === "estilo")
       return new Inspector(
-        document.querySelector("#observablehq-estilo-2d3b4664")
+        document.querySelector("#observablehq-estilo-f20b0d25")
       );
     return ["viewof dados"].includes(name);
   });
