@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 
 <!-- 
-  Revisão 1:
+  Revisão 2:
 
-  Alteração de rúbricas no topo das listas
-  Alteração do nome do docente para apresentação do úlitmo estado
+  Dificuldades com o publish do Observable
+  Versões cacheadas não são atualizadas para
+  a última publicação;
+  Despublicar quebra o javascript de exportação
+  e o processo precisa ser feito do zero
 
 -->
 
@@ -43,29 +46,29 @@
   <body></body>
 </html>
 
-<div id="observablehq-viewof-filtro-4ad7b460"></div>
+<div id="observablehq-viewof-filtro-2d3b4664"></div>
 <br /><br />
-<div id="observablehq-tabelea-4ad7b460"></div>
-<div id="observablehq-estilo-4ad7b460"></div>
+<div id="observablehq-tabelea-2d3b4664"></div>
+<div id="observablehq-estilo-2d3b4664"></div>
 
 <script type="module">
   import {
     Runtime,
     Inspector,
   } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-  import define from "https://api.observablehq.com/d/5038f6136ae20fc5@207.js?v=3";
+  import define from "https://api.observablehq.com/d/5038f6136ae20fc5.js?v=3";
   new Runtime().module(define, (name) => {
-    if (name === "viewof filtro")
-      return new Inspector(
-        document.querySelector("#observablehq-viewof-filtro-4ad7b460")
-      );
     if (name === "tabelea")
       return new Inspector(
-        document.querySelector("#observablehq-tabelea-4ad7b460")
+        document.querySelector("#observablehq-tabelea-2d3b4664")
+      );
+    if (name === "viewof filtro")
+      return new Inspector(
+        document.querySelector("#observablehq-viewof-filtro-2d3b4664")
       );
     if (name === "estilo")
       return new Inspector(
-        document.querySelector("#observablehq-estilo-4ad7b460")
+        document.querySelector("#observablehq-estilo-2d3b4664")
       );
     return ["viewof dados"].includes(name);
   });
