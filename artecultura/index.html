@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<!-- 
+  Revisão 1
+
+-->
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="pinterest" content="nopin" />
+    <meta name="pinterest" content="nohover" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="" />
+    <title>CAC</title>
+    <meta property="og:title" content="CAC" />
+    <meta name="generator" content="static" />
+    <meta name="description" content="ferramentas para o CAC-UFPE" />
+    <meta property="og:description" content="ferramentas para o CAC-UFPE" />
+    <meta name="author" content="Guilherme Ranoya" />
+    <meta property="og:url" content="https://cac-ufpe.vercel.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:site_name" content="CAC" />
+    <meta name="application-name" content="CAC" />
+
+    <style>
+      body {
+        margin: 40px;
+      }
+    </style>
+  </head>
+
+  <body></body>
+</html>
+
+<h1>Arte e Cultura</h1>
+
+<div id="observablehq-viewof-filtro-ebdf847e"></div>
+
+<br /><br />
+<div id="observablehq-estilo-ebdf847e"></div>
+<div id="observablehq-artecultura-ebdf847e"></div>
+
+<script type="module">
+  import {
+    Runtime,
+    Inspector,
+  } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/d/5038f6136ae20fc5.js?v=3";
+  new Runtime().module(define, (name) => {
+    if (name === "viewof filtro")
+      return new Inspector(
+        document.querySelector("#observablehq-viewof-filtro-ebdf847e")
+      );
+    if (name === "estilo")
+      return new Inspector(
+        document.querySelector("#observablehq-estilo-ebdf847e")
+      );
+    if (name === "artecultura")
+      return new Inspector(
+        document.querySelector("#observablehq-artecultura-ebdf847e")
+      );
+    return [
+      "viewof dados",
+      "tabelea",
+      "projetospesquisa",
+      "projetosextensao",
+      "inova",
+      "comissoes",
+      "colegiados",
+      "internacional",
+    ].includes(name);
+  });
+</script>
