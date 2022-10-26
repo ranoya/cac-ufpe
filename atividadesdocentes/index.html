@@ -47,31 +47,50 @@
 
   <body></body>
 </html>
+<div id="observablehq-menu-d6d797c2"></div>
+<div id="observablehq-viewof-filtro-d6d797c2"></div>
 
-<div id="observablehq-viewof-filtro-f20b0d25"></div>
 <br /><br />
-<div id="observablehq-tabelea-f20b0d25"></div>
-<div id="observablehq-estilo-f20b0d25"></div>
 
+<div id="observablehq-tabelea-d6d797c2"></div>
+<div id="observablehq-estilo-d6d797c2"></div>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@3/dist/inspector.css"
+/>
 <script type="module">
   import {
     Runtime,
     Inspector,
   } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-  import define from "https://api.observablehq.com/d/5038f6136ae20fc5@212.js?v=3";
+  import define from "https://api.observablehq.com/d/5038f6136ae20fc5@403.js?v=3";
   new Runtime().module(define, (name) => {
+    if (name === "menu")
+      return new Inspector(
+        document.querySelector("#observablehq-menu-d6d797c2")
+      );
     if (name === "viewof filtro")
       return new Inspector(
-        document.querySelector("#observablehq-viewof-filtro-f20b0d25")
+        document.querySelector("#observablehq-viewof-filtro-d6d797c2")
       );
     if (name === "tabelea")
       return new Inspector(
-        document.querySelector("#observablehq-tabelea-f20b0d25")
+        document.querySelector("#observablehq-tabelea-d6d797c2")
       );
     if (name === "estilo")
       return new Inspector(
-        document.querySelector("#observablehq-estilo-f20b0d25")
+        document.querySelector("#observablehq-estilo-d6d797c2")
       );
-    return ["viewof dados"].includes(name);
+    return [
+      "viewof dados",
+      "projetospesquisa",
+      "projetosextensao",
+      "inova",
+      "artecultura",
+      "comissoes",
+      "colegiados",
+      "internacional",
+    ].includes(name);
   });
 </script>
