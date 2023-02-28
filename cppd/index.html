@@ -57,6 +57,7 @@
       return new Inspector(
         document.querySelector("#observablehq-menu-d6d797c2")
       );
+  }
 </script>
 
 <h2>Próximos processos</h2>
@@ -70,6 +71,7 @@
 <br /><br />
 <h2>Outras demandas da CPPD-CAC</h2>
 <div id="observablehq-tdmd"></div>
+<div id="estilo"></div>
 
 <link
   rel="stylesheet"
@@ -98,5 +100,7 @@
       return new Inspector(document.querySelector("#observablehq-tatv"));
     if (name === "tdmd")
       return new Inspector(document.querySelector("#observablehq-tdmd"));
+    if (name === "estilo")
+      return new Inspector(document.querySelector("#estilo"));
   });
 </script>
