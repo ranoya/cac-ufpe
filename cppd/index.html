@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<!-- 
+  Revisão 1
+
+-->
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="pinterest" content="nopin" />
+    <meta name="pinterest" content="nohover" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="" />
+    <title>CAC</title>
+    <meta property="og:title" content="CAC" />
+    <meta name="generator" content="static" />
+    <meta name="description" content="ferramentas para o CAC-UFPE" />
+    <meta property="og:description" content="ferramentas para o CAC-UFPE" />
+    <meta name="author" content="Guilherme Ranoya" />
+    <meta property="og:url" content="https://cac-ufpe.vercel.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:site_name" content="CAC" />
+    <meta name="application-name" content="CAC" />
+
+    <style>
+      body {
+        margin: 40px;
+      }
+    </style>
+  </head>
+
+  <body></body>
+</html>
+
+<div id="observablehq-menu-d6d797c2"></div>
+
+<h1>CPPD-CAC</h1>
+<div id="observablehq-viewof-filtro-d6d797c2"></div>
+<br /><br />
+
+<script type="module">
+  import {
+    Runtime,
+    Inspector,
+  } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/@ranoya/producao-cac.js?v=3";
+  new Runtime().module(define, (name) => {
+    if (name === "menu")
+      return new Inspector(
+        document.querySelector("#observablehq-menu-d6d797c2")
+      );
+</script>
+
+<h2>Próximos processos</h2>
+<div id="observablehq-proximaanalise"></div>
+<div id="observablehq-proximosanalisados"></div>
+<div id="observablehq-filadeesperaatual"></div>
+
+<br /><br />
+<h2>Histórico de atividades</h2>
+<div id="observablehq-tatv"></div>
+<br /><br />
+<h2>Outras demandas da CPPD-CAC</h2>
+<div id="observablehq-tdmd"></div>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css"
+/>
+<script type="module">
+  import {
+    Runtime,
+    Inspector,
+  } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+  import define from "https://api.observablehq.com/@ranoya/relatoriocppdcac@599.js?v=3";
+  new Runtime().module(define, (name) => {
+    if (name === "proximaanalise")
+      return new Inspector(
+        document.querySelector("#observablehq-proximaanalise")
+      );
+    if (name === "proximosanalisados")
+      return new Inspector(
+        document.querySelector("#observablehq-proximosanalisados")
+      );
+    if (name === "filadeesperaatual")
+      return new Inspector(
+        document.querySelector("#observablehq-filadeesperaatual")
+      );
+    if (name === "tatv")
+      return new Inspector(document.querySelector("#observablehq-tatv"));
+    if (name === "tdmd")
+      return new Inspector(document.querySelector("#observablehq-tdmd"));
+  });
+</script>
