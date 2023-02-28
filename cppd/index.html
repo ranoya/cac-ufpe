@@ -46,6 +46,10 @@
 <div id="observablehq-viewof-filtro-d6d797c2"></div>
 <br /><br />
 
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@3/dist/inspector.css"
+/>
 <script type="module">
   import {
     Runtime,
@@ -56,6 +60,11 @@
     if (name === "menu")
       return new Inspector(
         document.querySelector("#observablehq-menu-d6d797c2")
+      );
+
+    if (name === "estilo")
+      return new Inspector(
+        document.querySelector("#observablehq-estilo-d6d797c2")
       );
   });
 </script>
@@ -71,12 +80,9 @@
 <br /><br />
 <h2>Outras demandas da CPPD-CAC</h2>
 <div id="observablehq-tdmd"></div>
-<div id="estilo"></div>
 
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css"
-/>
+<div id="observablehq-estilo-d6d797c2"></div>
+
 <script type="module">
   import {
     Runtime,
@@ -100,7 +106,41 @@
       return new Inspector(document.querySelector("#observablehq-tatv"));
     if (name === "tdmd")
       return new Inspector(document.querySelector("#observablehq-tdmd"));
-    if (name === "estilo")
-      return new Inspector(document.querySelector("#estilo"));
   });
 </script>
+
+<style>
+  .tabelaatividadescppdcac {
+    display: grid;
+    grid-template-columns: 100px 1fr 24px 1fr 24px 1fr 24px 24px [fim];
+    gap: 8px 12px;
+  }
+
+  .tabelademandas {
+    display: grid;
+    grid-template-columns: 100px 1fr [fim];
+    gap: 8px 12px;
+  }
+
+  .cabecalho,
+  .cabecalho.contexto,
+  .cabecalho.recebimentos,
+  .cabecalho.analisados {
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+
+  .leg {
+    font-size: 11px;
+  }
+
+  .contexto {
+    font-size: 14px;
+  }
+
+  .recebimentos,
+  .analisados {
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+</style>
