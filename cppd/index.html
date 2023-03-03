@@ -69,17 +69,25 @@
   });
 </script>
 
-<h2>Próximos processos</h2>
-<div id="observablehq-proximaanalise"></div>
-<div id="observablehq-proximosanalisados"></div>
-<div id="observablehq-filadeesperaatual"></div>
+<div class="infoinicial">
+  <div>
+    <h2>Próximos processos</h2>
+    <div id="observablehq-proximaanalise"></div>
+    <div id="observablehq-proximosanalisados"></div>
+    <div id="observablehq-filadeesperaatual"></div>
+  </div>
+  <div class="paradireita">
+    <h2>Outras demandas da CPPD-CAC</h2>
+    <div id="observablehq-tdmd"></div>
+  </div>
+</div>
 
-<br /><br />
+<br /><br /><br />
+
 <h2>Histórico de atividades</h2>
+<div class="linhadivisoria"></div>
 <div id="observablehq-tatv"></div>
-<br /><br />
-<h2>Outras demandas da CPPD-CAC</h2>
-<div id="observablehq-tdmd"></div>
+<br /><br /><br /><br />
 
 <div id="observablehq-estilo-d6d797c2"></div>
 
@@ -110,6 +118,49 @@
 </script>
 
 <style>
+  .infoinicial {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 16px;
+  }
+
+  .pradireita {
+    text-align: right;
+  }
+
+  .pradireita h2 {
+    text-align: right;
+  }
+
+  .pradireita div {
+    text-align: right;
+  }
+
+  @media screen and (max-width: 760px) {
+    .infoincial {
+      grid-template-columns: 1fr;
+    }
+    .pradireita {
+      text-align: left;
+    }
+
+    .pradireita h2 {
+      text-align: left;
+    }
+
+    .pradireita div {
+      text-align: left;
+    }
+  }
+
+  .linhadivisoria {
+    border-top: 1px solid #aaaaaa;
+    height: 1px;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
   .tabelaatividadescppdcac {
     display: grid;
     grid-template-columns: 100px 1fr 24px 1fr 24px 1fr 24px 24px [fim];
