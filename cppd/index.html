@@ -87,6 +87,13 @@
 <h2>Histórico de atividades</h2>
 <div class="linhadivisoria"></div>
 <div id="observablehq-tatv"></div>
+
+<br /><br /><br />
+
+<h2>Documentos e referências</h2>
+<div class="linhadivisoria"></div>
+<div id="observablehq-documentacao"></div>
+
 <br /><br /><br /><br />
 
 <div id="observablehq-estilo-d6d797c2"></div>
@@ -114,6 +121,11 @@
       return new Inspector(document.querySelector("#observablehq-tatv"));
     if (name === "tdmd")
       return new Inspector(document.querySelector("#observablehq-tdmd"));
+
+    if (name === "documentacao")
+      return new Inspector(
+        document.querySelector("#observablehq-documentacao")
+      );
   });
 </script>
 
@@ -193,5 +205,32 @@
   .analisados {
     text-transform: uppercase;
     font-size: 14px;
+  }
+
+  .tabeladocs {
+    display: grid;
+    gap: 0 32px;
+  }
+
+  .titulopublicodocs {
+    display: inline;
+    text-transform: uppercase;
+    background-color: #666666;
+    color: #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+
+  .docslabels {
+    display: block;
+    text-transform: uppercase;
+    color: #666666;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 10px;
+  }
+
+  .tabeladocs a {
+    display: block;
   }
 </style>
