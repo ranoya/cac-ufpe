@@ -52,7 +52,6 @@
 <h1 id="observablehq-titulo">Pendências da CPPD</h1>
 
 <br />
-<div id="observablehq-viewof-filtro"></div>
 
 <br /><br />
 <div id="observablehq-tabelea"></div>
@@ -73,10 +72,6 @@
       return new Inspector(document.querySelector("#observablehq-menu"));
     if (name === "titulopendencias")
       return new Inspector(document.querySelector("#observablehq-titulo"));
-    if (name === "viewof filtros")
-      return new Inspector(
-        document.querySelector("#observablehq-viewof-filtro")
-      );
 
     if (name === "listapendencias")
       return new Inspector(document.querySelector("#observablehq-tabelea"));
