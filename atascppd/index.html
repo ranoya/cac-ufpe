@@ -110,9 +110,11 @@
     $_GET["data"] != null &&
     $_GET["data"] != ""
   ) {
-    document.getElementsByTagName("input")[0].value = $_GET["data"];
-    document
-      .getElementsByTagName("input")[0]
-      .dispatchEvent(new Event("input", { bubbles: true }));
+    setTimeout(function () {
+      document.getElementsByTagName("input")[0].value = $_GET["data"];
+      document
+        .getElementsByTagName("input")[0]
+        .dispatchEvent(new Event("input", { bubbles: true }));
+    }, 2000);
   }
 </script>
