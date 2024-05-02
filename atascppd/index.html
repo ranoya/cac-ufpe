@@ -110,6 +110,11 @@
     $_GET["data"] != null &&
     $_GET["data"] != ""
   ) {
+    document.getElementById("observablehq-titulo").style.display = "none";
+    document.getElementById("observablehq-botoes").style.display = "none";
+    document.getElementById("observablehq-viewof-filtro").style.display =
+      "none";
+
     setTimeout(function () {
       document.getElementsByTagName("input")[0].value = $_GET["data"];
       document
